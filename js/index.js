@@ -9,7 +9,7 @@ $(document).ready(function() {
         return a;
     }
 
-    var myArray = ['green', 'green', 'blue', 'blue', 'yellow', 'yellow', 'orange', 'orange', 'red', 'red'];
+    var myArray = ["one", "one", "two", "two", "three", "three","four", "four", "five", "five","six", "six", "seven", "seven", "eight","eight", "nine", "nine", "ten", "ten","eleven", "eleven", "twelve", "twelve", "thirteen", "thirteen","fourteen", "fourteen", "fiveteen", "fiveteen","sixteen", "sixteen", "seventeen", "seventeen","eighteen","eighteen"];
     shuffle(myArray);
 
 
@@ -36,9 +36,15 @@ $(document).ready(function() {
             console.log(stisnati[0].classList[1])
 
             if (stisnati[1].classList[1] === stisnati[0].classList[1]) {
+                setTimeout(function () {
+                var moment = one.classList[1]
                 one.classList.remove("clicked");
+
+                $("." + moment).css("background-image", "linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)")
+                $("." + moment).css("color", "transparent")
                 two.classList.remove("clicked");
                 counter = 0;
+                }, 1000);
             } else {
                 setTimeout(function () {
                     one.classList.remove("clicked");

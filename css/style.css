@@ -1,33 +1,123 @@
 .div-box{
+
     display: flex;
     justify-items: flex-start;
-    padding: 30px;
+    margin:30px;
+    flex-wrap: wrap;
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+
 }
 .div{
-    height: 50px;
-    width: 50px;
-    margin: 10px;
+    flex: 1 0 16%;
+    height: 100px;
+    width: 150px;
+    border:2px solid #fff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 
-    background-color: black;
+
+
     transition: all .5s;
 }
+/*BACKGROUND IMAGES*/
+.one{
+    background-image: url("../img/1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.two{
+    background-image: url("../img/2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.three{
+    background-image: url("../img/3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.four{
+    background-image: url("../img/4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.five{
+    background-image: url("../img/5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.six{
+    background-image: url("../img/6.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.seven{
+    background-image: url("../img/7.jpg");
+    background-size: cover;
+    background-position: center;
 
-.green{
-    background-color: green;
 }
-.blue{
-    background-color: blue;
+.eight{
+    background-image: url("../img/8.jpg");
+    background-size: cover;
+    background-position: center;
 }
-.yellow{
-    background-color: yellow;
+.nine{
+    background-image: url("../img/9.jpg");
+    background-size: cover;
+    background-position: center;
 }
-.orange{
-    background-color: orange;
+.ten{
+    background-image: url("../img/10.jpg");
+    background-size: cover;
+    background-position: center;
 }
-.red{
-    background-color: red;
+.eleven{
+    background-image: url("../img/11.jpg");
+    background-size: cover;
+    background-position: center;
 }
+.twelve{
+    background-image: url("../img/12.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.thirteen{
+    background-image: url("../img/13.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.fourteen{
+    background-image: url("../img/14.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.fiveteen{
+    background-image: url("../img/15.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.sixteen{
+    background-image: url("../img/16.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.seventeen{
+    background-image: url("../img/17.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.eighteen{
+    background-image: url("../img/18.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 .black{
-    background-color: black;
+    background-image: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,1));
+
 }
