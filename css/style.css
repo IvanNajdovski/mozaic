@@ -1,0 +1,33 @@
+.div-box{
+    display: flex;
+    justify-items: flex-start;
+    padding: 30px;
+}
+.div{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+
+
+    background-color: black;
+    transition: all .5s;
+}
+
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
+.orange{
+    background-color: orange;
+}
+.red{
+    background-color: red;
+}
+.black{
+    background-color: black;
+}
