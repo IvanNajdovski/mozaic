@@ -22,50 +22,59 @@ $(document).ready(function() {
     }
     var brojka = 0
     var counter = 0;
-    $(".div").click( function() {
 
-        counter ++
-        var elem = $(this);
-        elem.addClass("clicked");
-        elem.removeClass("black");
-        var stisnati = $(".clicked")
+    let clickDisabled = false;
 
-        if (counter > 1) {
+    $('.div').click(function() {
+
+        console.log(clickDisabled);
+        if(clickDisabled === false) {
+            counter++
+            var elem = $(this);
+            elem.addClass("clicked");
+            elem.removeClass("black");
+            var stisnati = $(".clicked")
+
+            if (counter > 1) {
                 console.log("ivan")
-            var one = stisnati[0];
-            var two = stisnati[1];
-            console.log(stisnati[1].classList[1])
-            console.log(stisnati[0].classList[1])
+                var one = stisnati[0];
+                var two = stisnati[1];
 
-            if (stisnati[1].classList[1] === stisnati[0].classList[1]) {
-                setTimeout(function () {
-                    brojka ++
-                    console.log(brojka)
-                var moment = one.classList[1]
-                one.classList.remove("clicked");
+                if (stisnati[1].classList[1] === stisnati[0].classList[1]) {
 
-                $("." + moment).css("background-image", "linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)")
-                $("." + moment).css("color", "transparent")
-                two.classList.remove("clicked");
-                counter = 0;
-                if(brojka > 17){
-                    $(".div").css("border","none")
-                    alert("a dali si cute?");
+                    setTimeout(function () {
+                        brojka++
+                        console.log(brojka)
+                        var moment = one.classList[1]
+                        one.classList.remove("clicked");
+
+                        $("." + moment).css("background-image", "linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)")
+                        $("." + moment).css("color", "transparent")
+                        two.classList.remove("clicked");
+                        counter = 0;
+                        if (brojka > 17) {
+                            $(".div").css("border", "none")
+                            alert("a dali si cute?");
+                        }
+                        clickDisabled = true;
+                    }, 1000);
+                } else {
+                    setTimeout(function () {
+                        one.classList.remove("clicked");
+                        two.classList.remove("clicked");
+                        one.classList.add("black");
+                        two.classList.add("black");
+                    }, 1000);
+
                 }
-                }, 1000);
-            } else {
-                setTimeout(function () {
-                    one.classList.remove("clicked");
-                    two.classList.remove("clicked");
-                    one.classList.add("black");
-                    two.classList.add("black");
-                }, 1000);
-
+                counter = 0
             }
-            counter = 0
+            clickDisabled = true;
+            setTimeout(function () {
+                clickDisabled = false;
+            }, 600);
         }
 
     })
-
 
 })
