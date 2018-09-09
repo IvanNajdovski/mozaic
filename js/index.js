@@ -56,7 +56,7 @@ $(document).ready(function() {
                             $(".div").css("border", "none")
                             alert("a dali si cute?");
                         }
-                        clickDisabled = true;
+                        
                     }, 1000);
                 } else {
                     setTimeout(function () {
