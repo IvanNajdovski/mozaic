@@ -19,6 +19,7 @@ $(document).ready(function() {
         divs[i].classList.add(myArray[i])
         divs[i].classList.add("black")
     }
+    var brojka = 0
     var counter = 0;
     $(".div").click( function() {
 
@@ -37,6 +38,8 @@ $(document).ready(function() {
 
             if (stisnati[1].classList[1] === stisnati[0].classList[1]) {
                 setTimeout(function () {
+                    brojka ++
+                    console.log(brojka)
                 var moment = one.classList[1]
                 one.classList.remove("clicked");
 
@@ -44,6 +47,9 @@ $(document).ready(function() {
                 $("." + moment).css("color", "transparent")
                 two.classList.remove("clicked");
                 counter = 0;
+                if(brojka > 17){
+                    $(".div").css("border","none")
+                }
                 }, 1000);
             } else {
                 setTimeout(function () {
