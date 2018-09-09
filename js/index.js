@@ -12,7 +12,8 @@ $(document).ready(function() {
     var myArray = ["one", "one", "two", "two", "three", "three","four", "four", "five", "five","six", "six", "seven", "seven", "eight","eight", "nine", "nine", "ten", "ten","eleven", "eleven", "twelve", "twelve", "thirteen", "thirteen","fourteen", "fourteen", "fiveteen", "fiveteen","sixteen", "sixteen", "seventeen", "seventeen","eighteen","eighteen"];
     shuffle(myArray);
 
-
+    var background = Math.floor(Math.random() * 5)
+    $(".div-box").css("background-image",`url(img/banner-${background + 1}.jpg)`)
 
     var divs = $(".div");
     for( var i = 0; i < divs.length; i++){
