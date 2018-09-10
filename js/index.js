@@ -36,6 +36,8 @@ $(document).ready(function() {
             var stisnati = $(".clicked")
 
             if (counter > 1) {
+                if($(".clicked").length > 1){
+                clickDisabled = true;}else{clickDisabled = false;}
                 console.log("ivan")
                 var one = stisnati[0];
                 var two = stisnati[1];
@@ -56,23 +58,28 @@ $(document).ready(function() {
                             $(".div").css("border", "none")
                             alert("a dali si cute?");
                         }
-                        
+
+                        setTimeout(function () {
+                            clickDisabled = false;
+                        }, 1600);
+
                     }, 1000);
                 } else {
+                    clickDisabled = true;
                     setTimeout(function () {
                         one.classList.remove("clicked");
                         two.classList.remove("clicked");
                         one.classList.add("black");
                         two.classList.add("black");
-                    }, 1000);
+                        clickDisabled = false;
+                    },1000)
+
+
 
                 }
                 counter = 0
             }
-            clickDisabled = true;
-            setTimeout(function () {
-                clickDisabled = false;
-            }, 600);
+
         }
 
     })
