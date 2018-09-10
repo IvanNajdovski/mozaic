@@ -56,7 +56,7 @@ $(document).ready(function() {
                         counter = 0;
                         if (brojka > 17) {
                             $(".div").css("border", "none")
-                            alert("a dali si cute?");
+                            alert("SO MUCH LOVE");
                         }
 
                         setTimeout(function () {
