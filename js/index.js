@@ -12,7 +12,7 @@ $(document).ready(function() {
     var myArray = ["one", "one", "two", "two", "three", "three","four", "four", "five", "five","six", "six", "seven", "seven", "eight","eight", "nine", "nine", "ten", "ten","eleven", "eleven", "twelve", "twelve", "thirteen", "thirteen","fourteen", "fourteen", "fiveteen", "fiveteen","sixteen", "sixteen", "seventeen", "seventeen","eighteen","eighteen"];
     shuffle(myArray);
 
-    var background = Math.floor(Math.random() * 5)
+    var background = Math.floor(Math.random() * 10)
     $(".div-box").css("background-image",`url(img/banner-${background + 1}.jpg)`)
 
     var divs = $(".div");
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
                         setTimeout(function () {
                             clickDisabled = false;
-                        }, 1600);
+                        }, 100);
 
                     }, 1000);
                 } else {
